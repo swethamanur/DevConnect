@@ -40,7 +40,7 @@ userSchema.methods.generateToken = function() {
     jwtUser: { id: user.id }
   };
 
-  let token = jwt.sign(payload, "supersecret", { expiresIn: 360000 });
+  let token = jwt.sign(payload, "supersecret", { expiresIn: 3600000000 });
 
   user.tokens.push({ token });
 
